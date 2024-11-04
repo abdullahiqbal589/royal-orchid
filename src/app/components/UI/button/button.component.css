@@ -1,0 +1,39 @@
+
+
+button {
+  appearance: none;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1;
+  padding: 18px 48px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transform: scale(1);
+  transition: transform linear 0.2s;
+  width: fit-content;
+}
+button:hover {
+  transform: scale(1.1);
+}
+.btn-primary {
+  color: #f8f9fd;
+  background-color: #00cc95;
+}
+
+.btn-secondary {
+  color: #00cc95;
+  background-color: #e8faf4;
+}
+@media screen and (min-width: 52em) {
+  button {
+      width: inherit;
+  }
+}
+@media screen and (min-width: 40em) {
+  .button {
+      width: 100%;
+  }
+}

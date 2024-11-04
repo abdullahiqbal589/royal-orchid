@@ -1,0 +1,68 @@
+.display-4 {
+  color: #23262F;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 64px;
+}
+@media screen and (min-width: 40em) {
+  .display-4 {
+      color: #23262F;
+      font-size: 96px;
+      font-weight: 600;
+      line-height: 96px;
+  }
+}
+
+
+.lead {
+  color: #777E90;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+@media screen and (min-width: 40em) {
+  .lead {
+      color: #777E90;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 32px;
+  }
+}
+
+
+.heroCard {
+  margin-top: 48px;
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 48px;
+  border-radius: 24px;
+  position: relative;
+}
+.heroCard img{
+  object-fit: cover;
+}
+@media screen and (min-width: 40em) {
+
+  .heroCard {
+      margin-top: 60px;
+      height: 420px;
+  }
+}
+
+.tagMain {
+  padding: 18px;
+
+  align-items: center;
+  border-radius: 9999px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: white;
+  height: 60px;
+}
+@media screen and (min-width:767px) {
+  .cusineHolder{
+    max-width: 400px;
+  }
+}

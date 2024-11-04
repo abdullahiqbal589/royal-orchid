@@ -1,0 +1,27 @@
+<div id="navbar" class="container-fluid d-flex justify-content-between align-items-center w-100">
+  <div class="wrapper">
+    <a (click)="navigateHome()">
+      <span class="logo-text">Royal Orchid<span class="highlight">.</span></span>
+    </a>
+    <div class="divider"></div>
+  </div>
+
+  <div class="content gap-4 hamburgerIcon" [ngStyle]="{ display: 'flex', alignItems: 'center' }">
+    <div (click)="toggleNavbar()" class="toggle" [class.open]="navbarOpen">
+      <div class="styleToggle">
+        <div class="styleHamburger"></div>
+      </div>
+    </div>
+
+    <div class="nav-box d-flex" [class.box]="navbarOpen">
+      <a routerLink="/about" class="navigation-link">About</a>
+      <a routerLink="/menu" class="navigation-link">Menu</a>
+      <a routerLink="/blog" class="navigation-link">Blog</a>
+      <a routerLink="/contact" class="navigation-link">Contact</a>
+    </div>
+
+    <div class="content callBtn" [ngStyle]="{ marginLeft: navbarOpen ? '16px' : '16px' }">
+      <a href="tel:+18002684686">📞</a>
+    </div>
+  </div>
+</div>

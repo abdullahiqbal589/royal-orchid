@@ -1,0 +1,32 @@
+
+.py-5 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+img{
+  height: 160px;
+}
+@media screen and (min-width: 40em) {
+  img {
+      height: 280px;
+  }
+}
+@media screen and (min-width: 52em) {
+  img {
+      height: 500px;
+  }
+}
+.display-4 {
+  color: #23262F;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+@media screen and (min-width: 40em) {
+  .display-4 {
+      color: #23262F;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 56px;
+  }
+}

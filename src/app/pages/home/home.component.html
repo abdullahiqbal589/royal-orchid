@@ -1,0 +1,41 @@
+<app-layout title="Home">
+  <app-hero></app-hero>
+  <app-features></app-features>
+  <app-info></app-info>
+  <app-facts></app-facts>
+  <app-info-ii></app-info-ii>
+  <app-specialities></app-specialities>
+
+  <div class="container-fluid py-5">
+    <div class="text-center mb-4">
+      <h3 class="display-4">Latest Articles</h3>
+      <div class="mt-4">
+        <app-button variant="primary">View All</app-button>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <ng-container *ngFor="let post of allPostsData">
+        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
+          <!-- Use app-article within Bootstrap's card layout -->
+          <app-article
+            [id]="post.id"
+            [image]="post.image"
+            [title]="post.title"
+            [date]="post.date"
+            [category]="post.category"
+            class="w-100"
+          ></app-article>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+
+  <app-cta
+    title="The Blog"
+    subtitle="Learning how to learn is the most important skill to acquire."
+    button="Read More"
+  ></app-cta>
+  <app-instagram></app-instagram>
+</app-layout>

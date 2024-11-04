@@ -1,0 +1,45 @@
+
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h3 class="display-4">Chef Choice Specialities</h3>
+      <div class="mt-4">
+        <div class="lead">
+          Saturday & Sunday | Dinner All Day
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5 specialCards">
+      <ng-container *ngFor="let post of data">
+        <div class="col-12 col-md-6 col-lg-6 mb-4 d-flex child">
+          <!-- Use app-article within Bootstrap's card layout -->
+          <div class="box hover mt-3 w-100">
+            <div
+              class="wrapper specialImgHolder"
+
+            >
+            <div class="priceTag">
+              ${{post.price}}
+            </div>
+              <img
+                [src]="post.image"
+                [attr.data-blur]="post.image"
+                style="object-fit: cover; width: 100%; height: 100%;"
+                alt="Article Image"
+              />
+            </div>
+
+            <div class="content" style="padding: 30px; display: grid; grid-gap: 16px;">
+              <div class="wrapper" style="display: grid; grid-gap: 2px;">
+
+                <p class="body-bold">{{ post.title }}</p>
+                <p class="caption">{{ post.subtitle }}</p>
+              </div>
+              <app-pill [text]="post.text"></app-pill>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+

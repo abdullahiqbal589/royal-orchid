@@ -1,0 +1,43 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit", sans-serif !important;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+p{
+  margin-bottom: 0px;
+}
+@media screen and (min-width: 52em) {
+  .container-fluid {
+      padding-left: 90px !important;
+      padding-right: 90px !important;
+  }
+}
+@media screen and (min-width: 40em) {
+  .container-fluid {
+      padding-left: 80px !important;
+      padding-right: 80px !important;
+  }
+}
+
+.display-4 {
+  color: #23262F;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+@media screen and (min-width: 40em) {
+  .display-4 {
+      color: #23262F;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 56px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .moreBtns button{
+    width: 100% !important; /* Set width to 100% on small screens */
+  }
+}
+
