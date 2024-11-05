@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule , CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,7 +8,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule, provideHttpClient, withInterceptor
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { GoogleMapsModule } from '@angular/google-maps';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
 import { ArticleComponent } from './components/article/article.component';
 import { PillComponent } from './components/pill/pill.component';
@@ -65,10 +64,10 @@ import { HeroCardComponent } from './components/hero-card/hero-card.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule,
     ReactiveFormsModule,
     GoogleMapsModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
 
   ],
