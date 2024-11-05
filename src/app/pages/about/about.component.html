@@ -1,0 +1,165 @@
+<app-layout title="Home">
+  <section class="py-5 mt-md-5" style="padding-top: 100px; padding-bottom: 70px;">
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-start justify-content-between">
+      <div *ngIf="fadeIn" class="fade-in">
+        <h1 class="display-4">About</h1>
+      </div>
+
+      <div class="mt-4 mt-md-0 cusineHolder">
+        <p class="lead">
+          See your work as a living thing. Your task is to bring it alive and make others feel this.
+        </p>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="heroCard">
+        <img src="../../../assets/images/11.jpg" class="w-100 h-100" alt="" srcset="">
+        <div class="d-flex gap-3 tagMain">
+          <div width="44" height="44" class="Wrapper-sc-gcnjrk-0 dKnGKS">
+            <div class="Text-sc-1k1o8db-0 eJhhkW">🌶</div>
+          </div>
+          <div class="Text-sc-1k1o8db-0 eJhhkW">Royal orchid interior</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="aboutSecondSec py-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="holder mx-auto">
+          <div class="text mb-3">
+            <p class="">
+              You are on a voyage in which you will craft your own future. It is the time of youth and adventure--of
+              exploring the world with an open mind and spirit. In fact, whenever you must learn a new skill or alter
+              your career path later in life, you reconnect with that youthful adventurous part of yourself.
+            </p>
+          </div>
+          <div class="d-flex align-items-center flex-column ceoBox mt-4">
+            <div class="image-wrapper mr-3" style="height: 44px; width: 44px; overflow: hidden;">
+              <img src="../../../assets/images/12.jpg" class="img-fluid" alt="Profile"
+                style="height: 100%; object-fit: cover;" />
+            </div>
+            <div>
+              <h4 class="font-weight-bold mb-0 mt-2">Prasit Sittiragsenapa</h4>
+              <p class="text-muted mb-0">CEO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="aboutThirdSec py-5" style="background-color: rgb(244, 245, 246);">
+    <div class="container-fluid  py-4">
+      <div class="row">
+        <div class="col-sm-5">
+          <h2 class="display-10 mb-4">Organic &amp; Healthy Food For You</h2>
+        </div>
+        <div class="col-sm-7">
+          <div class="mb-4">
+            <p class="lead mb-2">Find a master to apprentice under, but instead of thinking about how much they can give
+              you, think about how you can help them with their work.</p>
+            <p class="lead mb-2">Learning how to learn is the most important skill to acquire.</p>
+          </div>
+          <div class="image-wrapper overflow-hidden mt-5 pt-md-5">
+            <img src="../../../assets/images/06.jpg" class="w-100 h-100" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <app-facts></app-facts>
+  <section class="aboutThirdSec py-5" style="background-color: rgb(244, 245, 246);">
+    <div class="container-fluid  py-4">
+      <div class="row flex-row-reverse">
+        <div class="col-sm-5">
+          <h2 class="display-10 mb-4">It’s not just Food, It’s an Experience.</h2>
+        </div>
+        <div class="col-sm-7">
+          <div class="mb-4">
+            <p class="lead mb-2">Find a master to apprentice under, but instead of thinking about how much they can give
+              you, this about how you can help them with their work.</p>
+            <p class="lead mb-2">Learning how to learn is the most important skill to acquire.</p>
+          </div>
+          <div class="image-wrapper overflow-hidden mt-5 pt-md-5">
+            <img src="../../../assets/images/12.jpg" class="w-100 h-100" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="ourCustomers py-5 my-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center mb-4">
+          <h4 class="display-10"> Our Customers Love Us</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let customer of customers">
+          <div class="customer box">
+            <img [src]="customer.image" alt="{{ customer.name }}">
+            <h5>{{ customer.name }}</h5>
+            <p>{{ customer.testimonial }}</p>
+            <div class="starsHolder">
+              <div class="stars">
+                <span *ngFor="let star of [].constructor(customer.rating)">⭐️</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="ourCustomers py-5 my-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center mb-4">
+          <h4 class="display-10"> Our Team</h4>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <ng-container *ngFor="let post of team">
+          <div class="col-12 col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="box hover mt-3 p-0 w-100 text-center">
+              <div class="wrapper" [ngStyle]="{
+                  height: '220px',
+                  width: '100%',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  borderTopRightRadius: '24px',
+                  borderTopLeftRadius: '24px'
+                }">
+                <img [src]="post.image" [attr.data-blur]="post.image" style="object-fit: cover; width: 100%; height: 100%;"
+                  alt="Article Image" />
+              </div>
+
+              <div class="content justify-content-center text-center" style="padding: 30px; display: grid; grid-gap: 16px;">
+                <div class="wrapper" style="display: grid; grid-gap: 2px;">
+                  <p class="body-bold mb-0">{{ post.title }}</p>
+                </div>
+                <div class="textPill mx-auto">
+                  {{post.category}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+
+    </div>
+  </section>
+  <app-cta>
+  </app-cta>
+  <div class="mt-5">
+    <app-footer></app-footer>
+  </div>
+</app-layout>

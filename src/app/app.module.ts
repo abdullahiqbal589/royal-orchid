@@ -30,6 +30,7 @@ import { ButtonComponent } from './components/UI/button/button.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
+import { AboutComponent } from './pages/about/about.component';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { HeroCardComponent } from './components/hero-card/hero-card.component';
     HeaderComponent,
     FooterComponent,
     HeroCardComponent,
+    AboutComponent,
 
   ],
   imports: [
