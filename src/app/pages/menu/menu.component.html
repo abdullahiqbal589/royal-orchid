@@ -1,0 +1,127 @@
+<app-layout title="Menu">
+  <section class="menuTitle py-5 my-3" style="border-bottom: 1px solid rgb(244, 245, 246);">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>The Menu</h1>
+          <p>More than 100 dishes made fresh from scratch every day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="lunchMenu  py-5 my-3">
+    <div class="container-fluid">
+      <div class="row gxx-5">
+        <div class="col-md-6">
+          <img src="../../../assets/images/07.jpg" class="w-100 h-100 mainImg" style="object-fit: cover;" alt="">
+        </div>
+        <div class="col-md-6 mt-md-0 mt-4">
+          <h1 class="pb-3">Lunch Menu</h1>
+          <div *ngFor="let item of lunchMenu" class="box">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex gap-3">
+                <img [src]="item.image" width="80px" height="50px" style="border-radius: 10px; object-fit: cover;" alt="">
+                <div>
+                  <h2>{{ item.name }}</h2>
+                  <p>{{ item.description }}</p>
+                </div>
+              </div>
+              <span>{{ item.price }}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <app-facts></app-facts>
+  <app-motivation></app-motivation>
+  <section class="lunchMenu  py-5 my-3">
+    <div class="container-fluid">
+      <div class="row gxx-5">
+        <div class="col-md-6">
+          <img src="../../../assets/images/08.jpg" class="w-100 h-100 mainImg" style="object-fit: cover;max-height: 800px;" alt="">
+        </div>
+        <div class="col-md-6 mt-md-0 mt-4">
+          <h1 class="pb-3">Dinner Menu</h1>
+          <div *ngFor="let item of lunchMenu" class="box">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex gap-3">
+                <img [src]="item.image" width="80px" height="50px" style="border-radius: 10px; object-fit: cover;" alt="">
+                <div>
+                  <h2>{{ item.name }}</h2>
+                  <p>{{ item.description }}</p>
+                </div>
+              </div>
+              <span>{{ item.price }}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="reservationMain py-5 my-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h1>Make a Reservation</h1>
+        </div>
+        <div class="col-md-4">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="1 person">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="21/01/22">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="11:00 am">
+          </div>
+        </div>
+        <div class="col-12 mt-4 text-center">
+          <app-button variant="primary">Submit</app-button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="lunchMenu  py-5 my-3">
+    <div class="container-fluid">
+      <div class="row gxx-5">
+        <div class="col-md-6">
+          <img src="../../../assets/images/02.jpg" class="w-100 h-100 mainImg" style="object-fit: cover;max-height: 400px;" alt="">
+        </div>
+        <div class="col-md-6">
+          <img src="../../../assets/images/03.jpg" class="w-100 h-100 mainImg" style="object-fit: cover;max-height: 400px;" alt="">
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="reservationMain py-5 my-3" style="background-color: transparent;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h1>Drinks</h1>
+          <p>Knowledge is always progressing. Don't let your ego fool you. You are always knowledge's inferior.</p>
+        </div>
+      </div>
+      <div class="drinksHolder">
+        <div class="row">
+          <div class="col-md-3 col-6" *ngFor="let name of names">
+            <div class="box" style="width:fit-content;">
+              <div class="d-flex gap-2 align-items-center">
+                <div style="background: rgb(0, 204, 149); width: 6px; height: 6px; border-radius: 50%;"></div>
+                <p class="mb-0">{{ name }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-instagram></app-instagram>
+</app-layout>

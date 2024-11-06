@@ -31,6 +31,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
 import { AboutComponent } from './pages/about/about.component';
+import { MenuComponent } from './pages/menu/menu.component';
+import { MotivationComponent } from './components/motivation/motivation.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 @NgModule({
@@ -59,6 +64,11 @@ import { AboutComponent } from './pages/about/about.component';
     FooterComponent,
     HeroCardComponent,
     AboutComponent,
+    MenuComponent,
+    MotivationComponent,
+    BlogComponent,
+    BlogDetailComponent,
+    ContactComponent,
 
   ],
   imports: [

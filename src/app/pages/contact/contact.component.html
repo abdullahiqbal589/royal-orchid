@@ -1,0 +1,57 @@
+<app-layout title="Menu">
+  <section class="menuTitle py-5 my-3" style="border-bottom: 1px solid rgb(244, 245, 246);">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Contact Us</h1>
+          <p>To create a meaninful work of art or to make a discovery or invetion requires great discipline, self-control, and emotional stability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="py-5 my-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          *ngFor="let fact of facts"
+          class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="box p-4 text-center" style="background-color: #FCFCFD;">
+            <h2 class="font-weight-bold display-6">{{ fact.title }}</h2>
+            <p class="mb-0 lead">{{ fact.subtitle }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="reservationMain py-5 my-3">
+    <div class="container-fluid">
+      <div class="leaveAMessage">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h1>Leave a Message</h1>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="mb-3">
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="Leave a Message"></textarea>
+            </div>
+          </div>
+          <div class="col-12 mt-4 text-center">
+            <app-button variant="primary">Submit</app-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-instagram></app-instagram>
+</app-layout>

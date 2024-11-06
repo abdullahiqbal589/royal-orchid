@@ -1,0 +1,138 @@
+
+.menuTitle h1 {
+  color: rgb(35, 38, 47);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 64px;
+  margin-bottom: 20px;
+}
+.menuTitle p {
+  color: rgb(119, 126, 144);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+
+.lunchMenu .mainImg{
+  border-radius: 24px;
+}
+.lunchMenu h1{
+  color: rgb(35, 38, 47);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+.gxx-5{
+  --bs-gutter-x: 5rem;
+}
+.lunchMenu h2{
+  color: rgb(35, 38, 47);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+}
+.lunchMenu p{
+  color: rgb(119, 126, 144);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+.reservationMain{
+  background-color: rgb(244, 245, 246);
+}
+.reservationMain h1{
+  color: rgb(35, 38, 47);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+input{
+  width: 100%;
+    font-size: 16px;
+    color: rgb(35, 38, 47);
+    font-family: Outfit, sans-serif;
+    padding: 12px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    outline: none;
+    transition: 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+input:focus{
+  border: 1px solid rgb(0, 204, 149);
+  box-shadow: none;
+}
+.reservationMain p{
+    color: rgb(119, 126, 144);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.drinksHolder{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.blogList img{
+  border-radius: 24px;
+  object-fit: cover;
+}
+.blogList span{
+  color: rgb(119, 126, 144);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.blogList h4{
+  color: rgb(35, 38, 47);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin: 10px 0px;
+}
+.blogList .pill{
+  padding: 8px 18px;
+  border-radius: 9999px;
+  background-color: rgb(244, 245, 246);
+  width: fit-content;
+  color: rgb(119, 126, 144);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 15px;
+}
+.box{
+  cursor: pointer;
+}
+@media screen and (min-width: 40em) {
+  .reservationMain p {
+    color: rgb(119, 126, 144);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+}
+  .reservationMain h1 {
+    color: rgb(35, 38, 47);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+}
+  .lunchMenu h1 {
+    color: rgb(35, 38, 47);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+}
+  .menuTitle p {
+    color: rgb(119, 126, 144);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+}
+  .menuTitle h1 {
+      color: rgb(35, 38, 47);
+      font-size: 96px;
+      font-weight: 600;
+      line-height: 96px;
+  }
+}

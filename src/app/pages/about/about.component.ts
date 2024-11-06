@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, TemplateRef, ViewChild } from '@angular/core';
 import { PostsService } from '../../services/posts.service';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-about',
@@ -18,10 +20,13 @@ import { trigger, transition, style, animate } from '@angular/animations';
     ])
   ]
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnDestroy  {
   allPostsData: any[] = [];
+  videoUrl: SafeResourceUrl | undefined;
+  private modalRef: NgbModalRef | undefined;
+  @ViewChild('videoModal', { static: true }) videoModal!: TemplateRef<any>;
 
-  constructor(private postsService: PostsService) {}
+  constructor(private postsService: PostsService,private sanitizer: DomSanitizer, private modalService: NgbModal) {}
   fadeIn: boolean = true;
   customers = [
     {
@@ -68,5 +73,21 @@ export class AboutComponent implements OnInit {
       { id: '4', date: '2024-01-01', title: 'Phillip Martin', image: '../../../assets/avatars/05.jpg', category: 'Manager' }
   ]
   ngOnInit() {
+  }
+  openModal(): void {
+    this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+      'https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1'
+    );
+    this.modalRef = this.modalService.open(this.videoModal, { centered: true });
+  }
+  closeModal(): void {
+    if (this.modalRef) {
+      this.modalRef.close();
+      this.videoUrl = undefined;
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.closeModal();
   }
 }

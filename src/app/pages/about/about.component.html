@@ -24,32 +24,7 @@
     </div>
 
   </section>
-  <section class="aboutSecondSec py-5">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="holder mx-auto">
-          <div class="text mb-3">
-            <p class="">
-              You are on a voyage in which you will craft your own future. It is the time of youth and adventure--of
-              exploring the world with an open mind and spirit. In fact, whenever you must learn a new skill or alter
-              your career path later in life, you reconnect with that youthful adventurous part of yourself.
-            </p>
-          </div>
-          <div class="d-flex align-items-center flex-column ceoBox mt-4">
-            <div class="image-wrapper mr-3" style="height: 44px; width: 44px; overflow: hidden;">
-              <img src="../../../assets/images/12.jpg" class="img-fluid" alt="Profile"
-                style="height: 100%; object-fit: cover;" />
-            </div>
-            <div>
-              <h4 class="font-weight-bold mb-0 mt-2">Prasit Sittiragsenapa</h4>
-              <p class="text-muted mb-0">CEO</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
+<app-motivation></app-motivation>
   <section class="aboutThirdSec py-5" style="background-color: rgb(244, 245, 246);">
     <div class="container-fluid  py-4">
       <div class="row">
@@ -138,11 +113,12 @@
                   borderTopRightRadius: '24px',
                   borderTopLeftRadius: '24px'
                 }">
-                <img [src]="post.image" [attr.data-blur]="post.image" style="object-fit: cover; width: 100%; height: 100%;"
-                  alt="Article Image" />
+                <img [src]="post.image" [attr.data-blur]="post.image"
+                  style="object-fit: cover; width: 100%; height: 100%;" alt="Article Image" />
               </div>
 
-              <div class="content justify-content-center text-center" style="padding: 30px; display: grid; grid-gap: 16px;">
+              <div class="content justify-content-center text-center"
+                style="padding: 30px; display: grid; grid-gap: 16px;">
                 <div class="wrapper" style="display: grid; grid-gap: 2px;">
                   <p class="body-bold mb-0">{{ post.title }}</p>
                 </div>
@@ -157,9 +133,40 @@
 
     </div>
   </section>
-  <app-cta>
-  </app-cta>
-  <div class="mt-5">
-    <app-footer></app-footer>
+  <section class="vidSection py-5 my-3">
+    <div class="container-fluid">
+      <div class="image-container position-relative">
+        <img src="../../../assets/images/11.jpg" alt="Background Image" class="w-100 h-100 rounded">
+        <div class="overlay d-flex flex-column align-items-center justify-content-center">
+          <div class="text">A place where you can feel like home.</div>
+          <button class="button" (click)="openModal()" data-toggle="modal" data-target="#videoModal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.1579 8.60503C20.614 10.1139 20.614 13.8861 18.1579 15.395L11.5263 19.4689C9.07017 20.9778 6 19.0917 6 16.074L6 7.92602C6 4.90827 9.07018 3.02218 11.5263 4.53105L18.1579 8.60503Z"
+                fill="#FCFCFD" stroke="#FCFCFD" stroke-width="1.5"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-3 mt-3">
+        <div class="font-weight-bold mr-3 videoTourText">Royal Orchid Thai Cuisine Video Tour</div>
+        <div class="d-flex align-items-center">
+          <div class="time">9:57 Min</div>
+        </div>
+      </div>
+
+      <!-- Modal content template -->
+      <ng-template #videoModal let-modal>
+        <div class="modal-body p-0" style="border-radius: 24px;">
+          <iframe *ngIf="videoUrl" style="border-radius: 24px;" [src]="videoUrl" width="100%" height="315"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+          </iframe>
+        </div>
+      </ng-template>
+    </div>
+  </section>
+  <div class="mb-5">
+    <app-cta>
+    </app-cta>
   </div>
 </app-layout>

@@ -1,0 +1,93 @@
+
+.menuTitle h1 {
+  color: rgb(35, 38, 47);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 64px;
+  margin-bottom: 20px;
+}
+.menuTitle p {
+  color: rgb(119, 126, 144);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+
+.lunchMenu .mainImg{
+  border-radius: 24px;
+}
+.lunchMenu h1{
+  color: rgb(35, 38, 47);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+.gxx-5{
+  --bs-gutter-x: 5rem;
+}
+.lunchMenu h2{
+  color: rgb(35, 38, 47);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+}
+.lunchMenu p{
+  color: rgb(119, 126, 144);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+.reservationMain{
+  background-color: rgb(244, 245, 246);
+}
+.reservationMain h1{
+  color: rgb(35, 38, 47);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.reservationMain p{
+    color: rgb(119, 126, 144);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.drinksHolder{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 40em) {
+  .reservationMain p {
+    color: rgb(119, 126, 144);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+}
+  .reservationMain h1 {
+    color: rgb(35, 38, 47);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+}
+  .lunchMenu h1 {
+    color: rgb(35, 38, 47);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+}
+  .menuTitle p {
+    color: rgb(119, 126, 144);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+}
+  .menuTitle h1 {
+      color: rgb(35, 38, 47);
+      font-size: 96px;
+      font-weight: 600;
+      line-height: 96px;
+  }
+}

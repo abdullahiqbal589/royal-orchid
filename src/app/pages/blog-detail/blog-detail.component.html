@@ -1,0 +1,20 @@
+<app-layout title="Menu">
+<section class="blogDetail py-5 my-3">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+          <img [src]="item.image" class="w-100" alt="">
+      </div>
+      <div class="col-md-9 col-12 mx-auto mt-5">
+        <h4>{{ item.title }}</h4>
+        <span>{{ item.date }}</span>
+        <p class="mt-4">{{item.description}}</p>
+        <div class="mt-4">
+          <app-button variant="secondary">Go Back</app-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</app-layout>
+
