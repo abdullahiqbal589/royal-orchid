@@ -3,15 +3,28 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+  styleUrls: ['./menu.component.css']  // Change `styleUrl` to `styleUrls` (plural)
 })
 export class MenuComponent {
-  names = [
-    'Thai Tea', 'Green Tea', 'Coffee', 'Milk Tea', 'Black Tea',
-    'Latte', 'Espresso', 'Cappuccino', 'Hot Chocolate', 'Mocha',
-    'Iced Tea', 'Lemonade', 'Smoothie', 'Americano', 'Matcha',
-    'Herbal Tea'
+   drinks = [
+    { name: 'Thai Tea', price: 3.50 },
+    { name: 'Green Tea', price: 2.75 },
+    { name: 'Coffee', price: 2.50 },
+    { name: 'Milk Tea', price: 3.00 },
+    { name: 'Black Tea', price: 2.50 },
+    { name: 'Latte', price: 4.00 },
+    { name: 'Espresso', price: 2.00 },
+    { name: 'Cappuccino', price: 3.75 },
+    { name: 'Hot Chocolate', price: 3.25 },
+    { name: 'Mocha', price: 4.25 },
+    { name: 'Iced Tea', price: 2.75 },
+    { name: 'Lemonade', price: 2.50 },
+    { name: 'Smoothie', price: 4.50 },
+    { name: 'Americano', price: 2.75 },
+    { name: 'Matcha', price: 4.00 },
+    { name: 'Herbal Tea', price: 2.75 }
   ];
+  
   lunchMenu = [
     {
       name: 'Pad Thai',
